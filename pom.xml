@@ -18,12 +18,15 @@
     </properties>
 
     <dependencies>
+        <!-- Jakarta Servlet API (needed for J2EE projects) -->
         <dependency>
             <groupId>jakarta.servlet</groupId>
             <artifactId>jakarta.servlet-api</artifactId>
             <version>6.1.0</version>
             <scope>provided</scope>
         </dependency>
+
+        <!-- JUnit for unit testing -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
@@ -36,16 +39,33 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- Mockito for mocking objects in tests -->
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
             <version>5.17.0</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- JPA (Java Persistence API) dependency -->
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>javax.persistence-api</artifactId>
+            <version>2.2</version>
+        </dependency>
+        
+        <!-- Hibernate (JPA provider) -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.4.30.Final</version> 
+        </dependency>
     </dependencies>
 
     <build>
         <plugins>
+            <!-- Maven WAR plugin for packaging -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
